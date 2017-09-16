@@ -1,0 +1,67 @@
+@font-face{
+	font-family: "Bebas Neue";
+	src: url('BebasNeue.otf');
+}
+
+*::selection{
+	background-color: #123456;
+}
+
+body{
+	background-color: #770082;
+	color: white;
+	text-align: center;
+	font-family: "Bebas Neue", Impact;
+	padding-bottom: 30px;
+}
+
+#credit{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin: 0 10px;
+}
+
+#credit p{
+	font-size: 1.5em;
+}
+
+#credit a{
+	color: #AAA;
+}
+
+h1{
+	font-size: 6em;
+	margin: 15px 0px 20px 0px;
+}
+
+.wrongday{
+	padding-top: 17%;
+}
+
+h2{
+	font-size: 2.5em;
+	margin-bottom: 0px;
+}
+
+p{
+	font-size: 1.7em;
+	margin: 0px 0px 0px 0px;
+}
+
+
+@media screen and (max-width: 980px){
+	h1{
+		font-size: 3em;
+	}
+
+	h2{
+		font-size: 2em;
+	}
+
+	p{
+		font-size: 1.5em;
+	}
+
+}
+
