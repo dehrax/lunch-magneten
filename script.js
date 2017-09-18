@@ -39,7 +39,7 @@ function fetchData(){
 					var table = nodeList.firstChild.nextSibling.innerHTML;
 					console.log(newDom);
 					console.log();
-					container.append(nodeList.firstChild.nextSibling.innerHTML);
+					container.innerHTML = nodeList.firstChild.nextSibling.innerHTML;
 					console.log(newDom);
 				});	
 			}
