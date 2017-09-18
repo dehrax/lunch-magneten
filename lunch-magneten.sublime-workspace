@@ -8,28 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/skarhed/Documents/GitHub/Space-Engineer-Notes/Ingenjörsvetenskap och Rymdteknik (R0007R).md",
-			"settings":
-			{
-				"buffer_size": 1390,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "a, funkar ej, fel dimensioner\nb, fungerar\nc, fungerar ej, fel dimensioner\nd, fungerar\ne, fungerar ej, fel dimensioner\nf, fungerar ej, fel dimensioner\ng, fungerar\nh, fungerar\ni, fungerar ej, fel dimensioner\nj, fungerar\nk, fungerar ej, fel dimensioner\nl, fungerar\nm, fungerar\nn, fungerar\no, fungerar ej, fel dimensioner\np, fungerar\nq, fungerar",
-			"settings":
-			{
-				"buffer_size": 341,
-				"line_ending": "Unix",
-				"name": "a, funkar ej, fel dimensioner"
-			}
-		},
-		{
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 850,
+				"buffer_size": 888,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -42,10 +24,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 87.0,
-		"last_filter": "markdwo",
+		"height": 209.0,
+		"last_filter": "insta",
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"side",
+				"View: Toggle Open Files in Side Bar"
+			],
 			[
 				"markdwo",
 				"Set Syntax: Markdown"
@@ -55,7 +45,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 412.0
 	},
 	"console":
 	{
@@ -76,6 +66,7 @@
 	},
 	"file_history":
 	[
+		"/Users/skarhed/Documents/GitHub/Space-Engineer-Notes/Ingenjörsvetenskap och Rymdteknik (R0007R).md",
 		"/Users/skarhed/Documents/GitHub/Space Engineer Notes/ngenjörsvetenskap och Rymdteknik (R0007R).md"
 	],
 	"find":
@@ -111,80 +102,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/skarhed/Documents/GitHub/Space-Engineer-Notes/Ingenjörsvetenskap och Rymdteknik (R0007R).md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1390,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1369,
-								1369
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/MarkdownHighlighting/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 341,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								273,
-								273
-							]
-						],
-						"settings":
-						{
-							"auto_name": "a, funkar ej, fel dimensioner",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 850,
+						"buffer_size": 888,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								850,
-								850
+								0,
+								0
 							]
 						],
 						"settings":
@@ -275,7 +210,7 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 150.0,
