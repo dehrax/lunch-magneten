@@ -1,14 +1,14 @@
-	# LocalStorage data structure
+# LocalStorage data structure
 
-	## Flags
+## Flags
 	expire: Date
 
 	updated: Date
 
 	offline: Bool
-	cached: Bool
+cached: Bool
 
-	## Weekday data
+## Weekday data
 	recipes: {
 		//array of weekdays 0-6 (0 is sunday according to [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay))
 		0: [
