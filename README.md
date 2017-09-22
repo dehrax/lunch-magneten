@@ -1,5 +1,5 @@
 # lunch-magneten
-
+!(Lunch Magneten Logo)[https://raw.githubusercontent.com/dehrax/lunch-magneten/master/icons/android-chrome-512x512.png?token=ABX0_CfmSka_URaz6V-NPpY312Gdeo0mks5ZzsYXwA%3D%3D]
 Okay, this repository is meant to display lunch.cf.
 
 ## Background
