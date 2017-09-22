@@ -129,9 +129,10 @@ function displayData(){
 	//Does data exist yet? Display loading.
 
 	var day = new Date().getDay();
+	//day = 5;
 	console.log(day);
 	if(day == 0 || day == 6){ //Saturday or sunday
-		printText('Vad gör du i skolan?', 'Det är ju helg!', true);
+		printText('Vad gör du i skolan?', 'Det är ju helg!', true, "wrongday");
 		return;
 	}
 
@@ -139,20 +140,25 @@ function displayData(){
 	var data = JSON.parse(window.localStorage.getItem('data'))[day-1];
 
 	data.forEach((dish) => {
-		printText(dish[0], dish[1]);
+		if(dish.length == 3){
+			printText(dish[0], dish[1] + '<br/>' + dish[2]);	
+		}
+		else{
+			printText(dish[0], dish[1] );
+		}
 	});
 	//No data? Display other text
 
 	//Display the menu for today
 }
 
-function printText(title, subtitle, big){
+function printText(title, subtitle, big, cssClass){
 	var temp = document.createElement('div');
 	var snippet;
 
 	//TODO make this look nicer
 	if(big){
-		snippet = '<h1>'+ title +'</h1><h2>'+ subtitle +'</h2>';
+		snippet = '<h1 class="' + cssClass + '">' + title + '</h1><h2>' + subtitle + '</h2>';
 	}
 	else{
 		snippet = '<h2>'+ title +'</h2><h3>'+ subtitle +'</h3>';
