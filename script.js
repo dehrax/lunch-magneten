@@ -130,7 +130,7 @@ function displayData(){
 
 	var day = new Date().getDay();
 	console.log(day);
-	if(day == 0 || day == 5){ //Saturday or sunday
+	if(day == 0 || day == 6){ //Saturday or sunday
 		printText('Vad gör du i skolan?', 'Det är ju helg!', true);
 		return;
 	}
