@@ -48,24 +48,24 @@ function decodeMenu(html){
 	for (var i = 0; i < 5; i++) {
 		//Say that the day wan to be an array
 		days[i] = [];
-		console.log("New day " + i);
+		//console.log("New day " + i);
 
 		//Loop dishes
 		for(var j = 0; j <= foodArrays.length-1; j++){
-			console.log('New dish ' + j);
+			//console.log('New dish ' + j);
 			// Say that the dish want to be an array
 			days[i][j] = [];
 
 			//Say that the dish is located at 
 			var dish = foodArrays[j];
-			console.log(dish);
+			//console.log(dish);
 
 			//Think of the pasta
 			if(j == 4){
-				console.log("Look at me! Im pasta!");
+				//console.log("Look at me! Im pasta!");
 				var pasta = dish[i*2].split(':');
 				pasta.push(dish[i*2+1].split(':')[1]);
-				console.log(pasta);
+				//console.log(pasta);
 				days[i][j] = pasta;
 
 			}
@@ -74,34 +74,10 @@ function decodeMenu(html){
 			}
 		}
 
-		/*
-		days[i] = foodArrays.map((dish, index) => {
-			//Dish for day i
-			//Account for the second type of pasta
-			if(index==4){
-				var pasta = dish[i].split(':').push(dish[i+1].split(':'));
-				return pasta;
-			}
-
-			//Selects the specific dish for day i
-			console.log(dish[i]);
-			return dish[i].split(':');
-		});*/
-		//console.log(days);
 	}
 
-	console.log(days);
-	
-	//var test = foodArrays["Pasta:"][0].split(':');
-
-	//printText(test[0], test[1]);
-
-	//Combine the arrays for daywise data
-
-	//Return structured data
-
-
-	//console.log(html);
+	//console.log(days);
+	return days;
 }
 
 function fetchData(){
@@ -128,7 +104,12 @@ function fetchData(){
 					//console.log(newDom);
 					
 					//container.innerHTML = table;
-					decodeMenu(table);
+
+					//Decode menu data and write array to a JSON string
+					window.localStorage.setItem('data', JSON.stringify(decodeMenu(table)));
+
+					//Timestamp for update
+					window.localStorage.setItem('updated', new Date());
 					//console.log(newDom);
 				});	
 			}
@@ -147,16 +128,22 @@ function fetchData(){
 function displayData(){
 	//Does data exist yet? Display loading.
 
-	//Get the data for the current date
 	var day = new Date().getDay();
 	console.log(day);
 	if(day == 0 || day == 5){ //Saturday or sunday
 		printText('Vad gör du i skolan?', 'Det är ju helg!', true);
 		return;
 	}
+
+	//Fetch data from localStorage. day-1 for 0 is monday
+	var data = JSON.parse(window.localStorage.getItem('data'))[day-1];
+
+	data.forEach((dish) => {
+		printText(dish[0], dish[1]);
+	});
 	//No data? Display other text
 
-	//Display the recipes for today
+	//Display the menu for today
 }
 
 function printText(title, subtitle, big){
