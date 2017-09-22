@@ -84,7 +84,7 @@ function fetchData(){
 	//Fetch request
 
 	//Run select * from htmlstring where url="https://gastrogate.com/rest_lunchinfo.php?id=69" via YQL (Yahoo Query Langauge)
-	var url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20htmlstring%20where%20url%3D%22https%3A%2F%2Fgastrogate.com%2Frest_lunchinfo.php%3Fid%3D69%22&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&format=json";
+	var url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20htmlstring%20where%20url%3D%22https%3A%2F%2Fgastrogate.com%2Frest_lunchinfo.php%3Fid%3D69%22&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&format=json";
 	var settings = {
 		method:'POST',
 
