@@ -4,10 +4,12 @@ init();
 function init(){
 	//alert("Hey!");
 	var container = document.querySelector("#container");
-	displayData();
+	
 	//Check if it is a new week compared to info stored in localstorage
 	if(new Date() >= new Date(window.localStorage.getItem('expire')).getTime()){
 		fetchData();
+	} else{
+		displayData();	
 	}
 }
 
@@ -111,6 +113,8 @@ function fetchData(){
 					//Timestamp for update
 					window.localStorage.setItem('updated', new Date());
 					//console.log(newDom);
+
+					displayData();
 				});	
 			}
 
