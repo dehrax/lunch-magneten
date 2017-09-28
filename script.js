@@ -11,6 +11,20 @@ function init(){
 	} else{
 		displayData();	
 	}
+
+	// Install Service Worker
+	if('serviceWorker' in navigator){
+	navigator.serviceWorker.register('serviceWorker.js')
+		.then(function(registration){
+			console.log('Service worker registration success ', registration);
+		})
+		.catch(function(err){
+			console.log(err);
+		});
+	}
+	else{
+		console.log('Service workers not supported. Update your browser to something fancy!');
+	}
 }
 
 //Localstorage setup: expire (the date when it needs to be updated), updated (when it was last updated), data (pure info in JSON object)
